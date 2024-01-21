@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="THREDDS Server Default Catalog : You must change this to fit your server!"
+    xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0 https://schemas.unidata.ucar.edu/thredds/InvCatalog.1.0.6.xsd">
+
+    <service name="all" base="" serviceType="compound">
+        <service name="odap" serviceType="OpenDAP" base="/thredds/dodsC/" />
+        <service name="dap4" serviceType="DAP4" base="/thredds/dap4/" />
+        <service name="http" serviceType="HTTPServer" base="/thredds/fileServer/" />
+        <service name="wcs" serviceType="WCS" base="/thredds/wcs/" />
+        <service name="wms" serviceType="WMS" base="/thredds/wms/" />
+        <service name="ncssGrid" serviceType="NetcdfSubset" base="/thredds/ncss/grid/" />
+        <service name="ncssPoint" serviceType="NetcdfSubset" base="/thredds/ncss/point/" />
+        <service name="cdmremote" serviceType="CdmRemote" base="/thredds/cdmremote/" />
+        <service name="iso" serviceType="ISO" base="/thredds/iso/" />
+        <service name="ncml" serviceType="NCML" base="/thredds/ncml/" />
+        <service name="uddc" serviceType="UDDC" base="/thredds/uddc/" />
+    </service>
+
+    <datasetScan name="Wave data" ID="models"
+        path="models" location="/mnt/data/netcdfs">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <documentation type="summary">
+                A high resolution 20-year partitioned hindcast for the New Zealand area
+
+João Albuquerque, Jose A. A. Antolínez, Richard Gorman, Fernando J. Méndez, Giovanni Coco
+
+
+Partitioned WAVEWATCH-III results from a 26-year (1993-2019) global wave model (Rascle and Ardhuin, 2013) were calibrated using a state-of-the-art directional wind-sea and swell wave height correction method based on satellite data (Albuquerque et al., 2018). The corrected partitions were then used to reconstruct the multimodal wave spectra along the boundaries of a SWAN grid that encompasses the whole New Zealand area. Waves were downscaled in non-stationary mode with CFSR wind forcings through 2 levels of nested grids, having both partitioned and integrated parameters stored at a 9Km resolution. Validation carried out against the available buoy data shows a good agreement between instrumental and hindcast data. Wave parameters estimated in areas where the water depth is lower than 30 metres were discarded as they might not represent physically sound values due to depth and grid resolution.
+
+
+As the latest published hindcast of the New Zealand waters dates back from 2003, the presented database, providing extensible and reliable information of the wave characteristics of New Zealand, will be of great value to a number of future studies, such as beach erosion, coastal inundation, and risk assessment. The partitioned wave data can provide valuable insights on the regional wave climate and its main drivers. The full description of data and methods will be available shortly in Albuquerque et al., 2019 (in prep).
+
+
+We acknowledge funding from a New Zealand GNS-Hazard Platform grant to Giovanni Coco. We also acknowledge NeSI for providing us the computing power necessary to perform the simulations and the Centre for eResearch for assisting us on the development of this hindcast web-interface.
+
+
+For more information about the authors and their research group, please visit the Coast and Ocean Collective’s web page or Twitter account.
+
+Past and Future GCMs simulations for New Zealand
+
+ João Albuquerque, Jose A. A. Antolínez, Fernando J. Méndez, Giovanni Coco
+
+
+Here we provide three time-slices of high resolution wave climate data for the New Zealand waters. We developed a set of historical and projected wave climatologies from 3 global climate models (GCM) and two projected pathways. The models were chosen based on their skill to represent the past atmospheric patterns of the wave generation basins New Zealand is exposed to.
+
+Reconstructed bimodal boundaries from windsea and swell waves together with GCM winds provided the forcing for a SWAN grid around New Zealand. Waves were downscaled in non-stationary mode through 4 levels of nesting, storing both partitioned and integrated parameters. The historical boundaries were obtained from 20 years (1986–2006) of wave data from three GCM (ACCESS1-0, CNRM-CM5 and MIROC5). The future wave climate boundaries and wind forcing are from two 20-year (2026–2046, 2080–2100) ensembles of wave climate projections from the same GCMs under two different representative concentration pathways (RCP 4.5, RCP 8.5).
+
+An assessment of the anomalies between the past and future GCMs provides us insightful information about the potential changes in the future wave climate of New Zealand. This dataset will be of great value to a number of future studies on risk assessment and mitigation of coastal hazards. The full description of data and methods will be available shortly in Albuquerque et al., 2020 (in prep).
+
+We acknowledge funding from a New Zealand GNS-Hazard Platform grant to Giovanni Coco.We also acknowledge NeSI for providing us the computing power necessary to perform the simulations and the Centre for eResearch for assisting us on the development of this web-interface. We would appreciate if you let us know that you are using the data.
+            </documentation>
+            <documentation xlink:title="Variable explanation" xlink:href="https://uoa-eresearch.github.io/waves/vars.pdf" />
+            <sort>
+                <lexigraphicByName increasing="true" />
+            </sort>
+            <addDatasetSize />
+        </metadata>
+    </datasetScan>
+</catalog>

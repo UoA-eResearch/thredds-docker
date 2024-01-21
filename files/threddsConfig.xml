@@ -34,6 +34,7 @@
   <catalogRoot>myExtraCatalog.xml</catalogRoot>
   <catalogRoot>myOtherExtraCatalog.xml</catalogRoot>
   -->
+  <catalogRoot>all.xml</catalogRoot>
 
   <!--
    * Setup for generated HTML pages.
