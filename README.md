@@ -61,7 +61,7 @@ docker run -d -p 80:8080 unidata/thredds-docker:<version>
 
 ## Versions
 
-See tags listed [on dockerhub](https://hub.docker.com/r/unidata/thredds-docker/tags). Our security protocols have become stricter, and any image linked to a CVE must be taken down immediately from DockerHub. We strive to maintain the security of this project's DockerHub images by updating them with the latest upstream improvements. If you have any concerns in this area, please email us at [security@unidata.ucar.edu](mailto:security@unidata.ucar.edu) to bring them to our attention.
+See tags listed [on dockerhub](https://hub.docker.com/r/unidata/thredds-docker/tags). Our security protocols have become stricter, and older images must be removed due to potential links with high profile CVEs. We strive to maintain the security of this project's DockerHub images by updating them with the latest upstream improvements. If you have any concerns in this area, please email us at [security@unidata.ucar.edu](mailto:security@unidata.ucar.edu) to bring them to our attention.
 
 
 <a id="h-1EB18866"></a>
@@ -85,7 +85,7 @@ Or you can build it yourself with:
 
 1.  ****Clone the repository****: `git clone https://github.com/Unidata/thredds-docker.git`
 2.  ****Navigate to the project directory****: `cd thredds-docker`
-3.  ****Build the Docker image****: `docker build -t thredds-docker:<version>` .
+3.  ****Build the Docker image****: `docker build -t thredds-docker:<version> .`
 
 
 <a id="h-58EC333B"></a>
