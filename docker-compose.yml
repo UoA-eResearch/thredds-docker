@@ -2,13 +2,13 @@ version: '3'
 
 services:
   thredds:
-    image: unidata/thredds-docker:5.4
+    image: unidata/thredds-docker:5.6
     ports:
       - "8080:8080"
     container_name: thredds
     volumes:
       - ~/thredds-docker/files/catalog.xml:/usr/local/tomcat/content/thredds/catalog.xml
       - ~/thredds-docker/files/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
-      - /mnt/data/netcdfs:/mnt/data/netcdfs
+      - /mnt/netcdfs:/mnt/netcdfs
     env_file:
       - "compose${THREDDS_COMPOSE_ENV_LOCAL}.env"

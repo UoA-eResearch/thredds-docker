@@ -20,7 +20,7 @@
     </service>
 
     <datasetScan name="Wave data" ID="models"
-        path="models" location="/mnt/data/netcdfs">
+        path="models" location="/mnt/netcdfs">
         <metadata inherited="true">
             <serviceName>all</serviceName>
             <documentation type="summary">
